@@ -7,6 +7,7 @@ type Detail struct {
 	BrandName        string                 `json:"brand_name"`
 	Prices           []DetailPrice          `json:"prices"`
 	StoragesResidues []DetailStorageResidue `json:"storages_residues"`
+	Images           []DetailImage          `json:"images,omitempty"`
 }
 
 type DetailPrice struct {
@@ -18,4 +19,9 @@ type DetailStorageResidue struct {
 	StorageID   any    `json:"storage_id"`
 	StorageName string `json:"storage_name"`
 	Residue     any    `json:"residue"`
+}
+
+type DetailImage struct {
+	FullPath      string `json:"full_path"`
+	ThumbnailPath string `json:"thumbnail_path"`
 }
